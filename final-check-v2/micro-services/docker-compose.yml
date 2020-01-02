@@ -1,0 +1,78 @@
+
+      
+version: '3'
+services:
+  payroll-mysql:
+    image: mysql:8.0.18
+    ports:
+      - "33065:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - D:/moviecruiserdb:/var/lib/mysql
+      - ./dbscripts:/docker-entrypoint-initdb.d
+
+  eureka-discovery-service:
+    image: eureka-discovery-service-app
+    build: eureka-discovery-service/.
+    ports:
+      - 8762:8761    
+      
+  authentication-service:
+    image: authentication-service-app
+    build: authentication-service/.
+    ports:
+      - 9094:9094
+    depends_on:
+      - payroll-mysql
+      - eureka-discovery-service
+    links:
+      - payroll-mysql
+      - eureka-discovery-service
+      
+  movielist-service:
+    image: movielist-service-app
+    build: movielist-service/.
+    ports:
+      - 9095:9095
+    depends_on:
+      - payroll-mysql
+      - eureka-discovery-service
+    links:
+      - payroll-mysql
+      - eureka-discovery-service
+      
+  signup-service:
+    image: signup-service-app
+    build: signup-service/.
+    ports:
+      - 9096:9096
+    depends_on:
+      - payroll-mysql
+      - eureka-discovery-service
+    links:
+      - payroll-mysql
+      - eureka-discovery-service  
+      
+  zuul-gateway-service:
+    image: zuul-gateway-service-app
+    build: zuul-gateway-service/.
+    ports:
+      - 8083:8083
+    depends_on:
+      - authentication-service
+      - movielist-service
+      - signup-service
+    links:
+      - authentication-service 
+      - movielist-service
+      - signup-service
+      
+  angular-service:
+    image: angular-app
+    build: angular-service/.
+    ports:
+      - 9086:80
+    links:
+      - zuul-gateway-service
+      

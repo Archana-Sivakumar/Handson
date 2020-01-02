@@ -1,0 +1,36 @@
+<div *ngIf="userRoleName=='admin'">
+    <app-movie-search (searchEmitter)="search($event)"></app-movie-search>
+    <div class="container-fluid">
+        <div class="row ">
+              <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let movies of filteredMovieList">
+                <app-movie
+                  [movie]="movies" 
+                  (editEmitter)="editMovieList($event)"
+                  [userRoleName] ="userRoleName"
+                >
+                </app-movie>
+              </div>
+        </div>
+      </div>
+</div>
+
+<div *ngIf="userRoleName!='admin'">
+    <app-movie-search (searchEmitter)="search($event)"></app-movie-search>
+    <div class="container-fluid">
+        <div class="row ">
+              <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let movies of filteredMovieList">
+                <app-movie
+                  [movie]="movies"
+                  (addEmitter)="addToFavorite($event)"
+                  (seatAvailabilty) = "seatAvailStatus($event)"
+                  [favoriteMsg]="favoriteMsg"  
+                  [addedMovieId]="addedMovieId" 
+                  [userRoleName] ="userRoleName"
+                >
+                </app-movie>
+              </div>
+        </div>
+      </div>
+</div>
+    
+    

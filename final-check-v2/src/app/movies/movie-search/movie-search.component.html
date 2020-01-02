@@ -1,0 +1,11 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="navbar-brand">Find Movie</h1>
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="material-icons film-icon text-dark">local_movies</i></span>
+                  </div>
+                <input class="form-control form-control-lg" type="text" [(ngModel)]="searchString" (keyup)="filterData()">
+            </div>
+      </div>   
+</div>
