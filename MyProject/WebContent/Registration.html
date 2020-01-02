@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+</head>
+<body>
+	<form action="RegistrationServlet" method="post">
+		<table>
+			<tr>
+				<td><b>FIRST NAME</b></td>
+				<td><b>:</b></td>
+				<td><input type="text" name="fname"></td>
+			</tr>
+
+			<tr>
+				<td><b>LAST NAME</b></td>
+				<td><b>:</b></td>
+				<td><input type="text" name="lname"></td>
+			</tr>
+
+			<tr>
+				<td><b>DATE OF BIRTH</b></td>
+				<td><b>:</b></td>
+				<td><input type="date" name="date" id="dob"></td>
+			</tr>
+
+			<tr>
+				<td><b>AGE</b></td>
+				<td><b>:</b></td>
+				<td><input type="number" name="number" id="age"></td>
+			</tr>
+
+			<tr>
+				<td><b>GENDER</b></td>
+				<td><b>:</b></td>
+				<td><input type="radio" name="gender" value="male">
+					Male <input type="radio" name="gender" value="female">
+					Female <input type="radio" name="gender" value="other">
+					Others</td>
+			</tr>
+
+			<tr>
+				<td><b>E-MAIL ID</b></td>
+				<td><b>:</b></td>
+				<td><input type="email" name="email"></td>
+			</tr>
+
+			<tr>
+				<td><b>CONTACT NO</b></td>
+				<td><b>:</b></td>
+				<td><input type="tel" name="contact" id="one"></td>
+			</tr>
+
+			<tr>
+				<td><b>HOBBIES</b></td>
+				<td><b>:</b></td>
+				<td><input type="checkbox" id="checked" name="hobby"
+					value="Drawing">Drawing<br> <input type="checkbox"
+					id="checked" name="hobby" value="Reading">Reading<br>
+					<input type="checkbox" id="checked" name="hobby" value="Gardening">Gardening<br>
+					<input type="checkbox" id="checked" name="hobby" value="Others">Others
+				
+			</tr>
+
+			<tr>
+				<td><b>ADDRESS</b></td>
+				<td><b>:</b></td>
+				<td><textarea name="address">
+</textarea></td>
+			</tr>
+
+			<tr>
+				<td><b>COUNTRY</b></td>
+				<td><b>:</b></td>
+				<td><select name="country">
+						<option value="select">SELECT</option>
+						<option value="IND">INDIA</option>
+						<option value="USA">UNITED STATES OF AMERICA</option>
+						<option value="FRANCE">FRANCE</option>
+						<option value="CHINA">CHINA</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" value="REGISTER"></td>
+				<td><input type="reset" value="CLEAR"></td>
+
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
