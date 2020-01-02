@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+.material-icons {
+  
+   vertical-align:middle;
+   font-size:25px;
+}
+.person {
+   
+   color:#ffffff;
+   position:relative;
+   bottom:3px;
+   vertical-align:middle;
+   font-size:20px;
+}
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top">
+	
+	    <ul class="navbar-nav">
+	        <li><i class="material-icons" style="color:#ffffff;">shopping_cart</i>
+		    <a class="navbar-brand" href="#" style="position:fixed float:left;">eKart</a></li>
+		</ul>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+		
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		
+	        <ul class="navbar-nav ml-auto">
+	
+		        <li class="nav-item">
+			        <a class="nav-link" href="#">Products</a>
+			    </li>
+			
+			    <li class="nav-item">
+			        <a class="nav-link" href="#" style="top:20px;"><i class="material-icons person">person</i>John</a>
+			    </li>
+				
+			    <li class="nav-item">
+			        <a class="nav-link" href="#">Logout</a>
+			    </li>
+				
+		    </ul>
+			
+		</div>
+		
+	</nav>
+	
+	<div class="jumbotron jumbotron-fluid" style="height:200px;">
+  
+        <input type="text" style="position:absolute; width:50%; float:right; left:20%; top:12%;" placeholder="Search..." name="search">
+		<i class="material-icons" style="float:right; position:absolute; left:70%; top:12%">search</i>
+  
+    </div>
+
+    <div class="container-fluid">
+
+       <div class="card" style="width:300px">
+	    <img class="card-img-top" src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80" alt="Card image" style="width:100%">
+            <div class="card-body">
+		    
+                <div class="row">	
+			
+		            <div class="col-6">Sandwich</div>
+		            <div class="col-6" style="float:right; left:80px;">Rs.99</div>
+		 
+		        </div>
+			
+			    <div class="d-flex justify-content-between mt-2">
+				
+				    <button type="button" class="btn btn-success btn-sm">Active</button>
+					
+				    <div><i class="material-icons black-icon">local_shipping</i>
+					<span class="badge badge-pill badge-primary">Free</span></div>
+				    
+				</div>
+			
+            </div>
+        </div>
+
+    </div>
+	
+	<nav class="navbar navbar-expand-md bg-info navbar-dark fixed-bottom">
+	  <ul class="navbar-nav">
+	  <li>  Copyright </li><li><i class="material-icons">copyright</i></li> <li>2019</li>
+		</ul>
+	</nav>
+	
+	
+</body>
+</html>

@@ -1,0 +1,46 @@
+<div class="container mt-5">
+	
+    <h2>Favorites</h2>
+
+    <div *ngIf="favoriteStatus && noOfFavorites!=0">
+        <div class="container-fluid mt-3">
+        
+            <div class="jumbotron status-jumbotron">
+                <h4>Movie deleted successfully.</h4>
+            </div>  
+
+        </div>
+    </div>
+
+    <div *ngIf="noOfFavorites==0 || error=='Favorites is Empty!'">
+        <div class="jumbotron favorite-jumbotron">
+            <h4>No movies in favorites.Use <a routerLink="/movie-list">'Add to Favorites'</a> option in movie list.</h4>
+        </div> 
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let favorite of favoriteMovie">
+    
+            <div class="d-flex justify-content-between mt-2">
+                <h4 class="card-title text-muted">{{favorite.title}}</h4>
+                <div>
+                    <h4 class="card-title text-danger">${{favorite.boxOffice}}</h4>
+                    <button type="button" class="btn-primary custom-btn" (click)=removeFromFavorites(favorite.id)>
+                       <i class="material-icons">delete_forever</i>
+                    </button>
+                </div>
+            </div>
+      
+        </li>
+
+        <div *ngIf="noOfFavorites>0">
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between mt-2">
+                <h4 class="card-title">NoOfFavorites</h4>
+                <h4 class="card-title text-danger">{{noOfFavorites}}</h4>
+            </div>
+          </li>
+        </div>     
+    </ul>
+
+</div>

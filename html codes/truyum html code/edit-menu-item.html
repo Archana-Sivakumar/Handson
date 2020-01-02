@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="D:\truYum\WebContent\style\style.css"/>
+        <script type="text/javascript" src="D:\truYum\WebContent\js\script.js"></script>
+</head>
+<body background="D:\truYum\WebContent\images\shopping.jpg">
+    <header>
+        <b id="truyum">truYum</b>
+	    <img id="image" src="D:\truYum\WebContent\images\truyum-logo-light.png">
+	    <a href="file:///D:/truYum/WebContent/menu-item-list-admin.html" class="menu">Menu</a>
+    </header>
+    
+        <h1>Edit Menu Item</h1>
+        
+    <article>  
+    <table>
+    
+        <tr>
+            <td>
+			   <label for="title_id"><b>Name</b></label><br>
+			   <input type="text" name="title" id="title_id" value="Sandwich">
+			</td>
+        </tr>
+        
+        <tr>
+            <td>
+			   <label for="price_id"><b>Price (Rs.)</b></label><br>
+			   <input type="text" name="price" id="price_id" value="99.00">
+		    </td>
+		    
+            <td>
+			   <b>Active</b><br>
+			   <input type="radio" name="inStock" checked>Yes<input type="radio" name="inStock">No
+			</td>
+			
+            <td>
+			   <label for="launch_id"><b>Date of Launch</b></label><br>
+			   <input type="text" name="dateOfLaunch" id="launch_id" value="15/03/2017">(DD/MM/YYYY)
+			</td>
+			
+            <td>
+			    <b>Category</b><br>
+                <select name="category">
+                    <option value="Main Course">Main Course</option>
+                    <option value="select" id="none">Select</option>
+                    <option value="Starters">Starters</option>
+                    <option value="Desserts">Desserts</option>
+                    <option value="Drinks">Drinks</option>
+                </select>
+			</td>
+        </tr>
+        
+        <tr>
+            <td>
+			    <input type="checkbox" name="freeDelivery" checked><b>Free Delivery<b>
+			</td>
+        </tr>
+        
+        <tr>
+            <td>
+			    <input type="submit" name="submit" id="submit_id" value="Save" onclick="validate()">
+			</td>
+        </tr>
+	</table>
+	</article>
+	
+        <div>	
+		    <p id="title_msg" class="error_msg"></p>
+			<p id="price_msg" class="error_msg"></p>
+			<p id="launch_msg" class="error_msg"></p>
+			<p id="category_msg" class="error_msg"></p>
+		</div>	
+		
+    <footer>
+        Copyright &#169 2019
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Cognizant</title>
+<h1 style="text-align: left; ">Personal details</h1>
+<style>
+table,td
+{
+border:"0";
+width:"500";
+height:"500";
+}
+</style>
+<script type="text/javascript" src="external.js"> 
+</script>
+</head>
+<body>
+<form>
+<table>
+
+<tr>
+<td><label for="fname">Name</label> </td>
+<td><input type="text" name="fname" id="fname" /></td>
+</tr>
+
+<tr>
+  <td>Gender</td>
+  <td><label for="male">Male</label>
+  <input type="radio" name="gender" id="male" value="male" checked>
+  <label for="female">Female</label>
+  <input type="radio" name="gender" id="female" value="female"></td>
+</tr>
+
+<tr>
+<td>Home Town</td>
+<td><select name="Home Town">
+   <option value="Delhi">New Delhi</option>
+   <option value="Mumbai">Mumbai</option>
+   <option value="Kolkata">Kolkata</option>
+   <option value="Chennai">Chennai</option>
+   <option value="Hyderabad">Hyderabad</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Address</td>
+<td><textarea name="address">
+</textarea></td>
+</tr>
+
+<tr>
+<td>Skills</td>
+<td><label for="Java">Java</label>
+<input type="checkbox" name="skills" id="Java" value="Java" checked="checked">
+<label for="HTML">HTML</label>
+<input type="checkbox" name="skills" id="HTML" value="HTML">
+<label for="Oracle">Oracle</label>
+<input type="checkbox" name="skills" id="Oracle" value="Oracle"></td>
+</tr>
+
+<tr>
+  <td>Password</td>
+  <td><input type="password" name="password" id="pass"></td>
+</tr>
+
+<tr>
+<td></td>
+<td><button type="button" onclick="validate()">Submit</button></td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>

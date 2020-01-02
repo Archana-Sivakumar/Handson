@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Employee Javascript Object
+        </title>
+    </head>
+    <body>
+        <script>
+            var jsonObject = '{ "firstName": "John", "lastName": "Stoke","salary": 5000,"permanentStaff": true,"departmentId": 1,"departmentName":"Payroll","skill":[{"id":1,"name":"HTML"},{"id":2,"name":"CSS"},{"id":3,"name":"JS"}] }';
+            var employeeJsObject = JSON.parse(jsonObject);
+
+            console.log(jsonObject);
+            console.log(employeeJsObject);
+
+            console.log("firstname:"+ employeeJsObject.firstName);
+            console.log("lastname:"+ employeeJsObject.lastName);
+            console.log("salary:"+ employeeJsObject.salary);
+            console.log("permanentStaff:"+ employeeJsObject.permanentStaff);
+            console.log("departmentID:"+ employeeJsObject.departmentId);
+            console.log("departmentName:"+ employeeJsObject.departmentName);
+            console.log("skill:"+ employeeJsObject.skill);
+            
+            employeeJsObject.skill.forEach(element => {console.log(element.id)
+                
+           });
+
+           employeeJsObject.skill.forEach(element => {console.log(element.name)
+                
+            });
+            
+        </script>
+    </body>
+</html>

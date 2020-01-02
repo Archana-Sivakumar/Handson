@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <link rel="stylesheet" type="text/css" href="D:\final-check\WebContent\style\style.css"/>
+       <script type="text/javascript" src="D:\final-check\WebContent\js\script.js"></script>
+</head>
+<body background="D:\final-check\WebContent\images\background.jpg">
+    <header>
+       <b id="movie_cruiser">Movie Cruiser</b>
+	   <img id="image" src="D:\final-check\WebContent\images\film.jpg">
+	   <a href="file:///D:/final-check/WebContent/movie-list-admin.html" class="movie">Movies</a>
+    </header>
+       <h1>Edit Movie</h1>
+    <article>  
+    <table>
+        <tr>
+            <td>
+			   <label for="title_id"><b>Title</b></label><br>
+			   <input type="text" name="title" id="title_id" value="Avengers-End Game">
+			</td>
+        </tr>
+        <tr>
+            <td>
+			   <label for="box_id"><b>Gross ($)</b></label><br>
+			   <input type="text" name="boxOffice" id="box_id" value="2787965087">
+			</td>
+            <td>
+			   <b>Active</b><br>
+			   <input type="radio" name="active" checked>Yes<input type="radio" name="active">No
+			</td>
+            <td>
+			   <label for="launch_id"><b>Date of Launch</b></label><br>
+			   <input type="text" name="dateOfLaunch" id="launch_id" value="27/04/2022">(DD/MM/YYYY)
+			</td>
+			</td>
+            <td>
+			    <b>Genre</b><br>
+                <select name="genre">
+                    <option value="Superhero">SuperHero</option>
+                    <option value="select" id="none">Select</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Comedy">Comedy</option>
+					<option value="Adventure">Adventure</option>
+					<option value="Thriller">Thriller</option>
+                </select>
+		    </td>
+        </tr>
+        <tr>
+            <td>
+			    <input type="checkbox" name="hasTeaser" checked><b>Has Teaser<b>
+		    </td>
+        </tr>
+        <tr>
+            <td>
+			    <input type="submit" name="submit" id="submit_id" value="Save" onclick="validate()">
+			</td>
+        </tr>
+	</table>
+	</article>
+        <div>	
+		    <p id="title_msg" class="error_msg"></p>
+			<p id="boxOffice_msg" class="error_msg"></p>
+			<p id="launch_msg" class="error_msg"></p>
+			<p id="genre_msg" class="error_msg"></p>
+		</div>	
+    <footer>
+        Copyright &#169 2019
+    </footer>
+</body>
+</html>

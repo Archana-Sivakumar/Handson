@@ -1,0 +1,138 @@
+body {
+  background-color:black;
+}
+
+#m1{
+color:green;
+text-align:center;
+}
+
+#m2{
+color:green;
+text-align:center;
+}
+
+.my_image
+{
+height:100px;
+width:100%;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear:both;
+  display: table;
+}
+
+.one{
+color:green;
+}
+.demo{
+ position: absolute;
+  top: 80px;
+  right: 0;
+  height: 100px;
+  border-radius: 5px;
+  background-color: black;
+  width: 300px;
+  color:white;
+  border: 1px solid white;
+  padding: 50px;
+  margin: 2px;
+  float:right;
+}
+
+.content{
+position: relative;
+  top: 80px;
+  right: 0;
+  height: 100px;
+  border-radius: 5px;
+  background-color: black;
+  width: 1160px;
+  color:white;
+  border: 1px solid white;
+  padding: 50px;
+  margin: 2px;
+}
+
+table,th,td{
+  border: 1px solid green;
+ border-collapse: collapse;
+width:50%;
+}
+
+tr:hover {
+background-color:lightpink;
+}
+
+th{
+  background-color: #4CAF50;
+  color: white;
+}
+
+th, td {
+ color:white;
+ font-style:italic;
+ font-family: "Times New Roman", Times, serif;
+ padding: 15px;
+}
+
+#m3{
+color:green;
+text-align:center;
+}
+
+.list
+{
+color:green;
+}
+
+.contact{
+color:green;
+}
+
+.main{
+  color:green
+}
+
+#about{
+font-style:italic;
+color:green;
+}
+
+#frame {
+position:relative;
+top:250px;
+left:10px;
+height:300px;
+ width:40%;
+border-color:green;
+ float:right;
+}
+
+/* unvisited link */
+a:link {
+  color: green;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}

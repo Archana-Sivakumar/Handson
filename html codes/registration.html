@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1 style="text-align: center; ">REGISTRATION PAGE</h1>
+<hr>
+<style>
+table,td
+{
+border:"0";
+width:"500";
+height:"500";
+}
+</style>
+<script>
+function validate()
+{
+var a=document.getElementById("one").value;
+var l=a.length;
+if(l>10)
+{
+document.getElementById("two").innerHTML="Not a valid phone number";
+}
+if(document.getElementById("checked").checked)
+{
+}
+else
+{
+document.getElementById("three").innerHTML="Select atleast one checkbox";
+}
+}
+function calculate()
+{
+var date=document.getElementById("dob").value;
+var date1=date.split('/');
+var date2=date1.split('-');
+var today=new Date();
+var nowyear=today.getFullYear();
+var newage=nowyear-date2[0];
+document.getElementById("age").value=newage;
+}
+</script>
+</head>
+<body>
+<form>
+<table>
+<tr>
+<td><b>FIRST NAME</b><b style="color:red">*</b></td>
+<td><b>:</b></td>
+<td><input type="text" name="fname" maxlength="20"></td>
+</tr>
+
+<tr>
+  <td><b>LAST NAME</b><b style="color:red">*</b></td>
+  <td><b>:</b></td>
+  <td><input type="text" name="lname" maxlength="20"></td>
+</tr>
+
+<tr>
+  <td><b>DATE OF BIRTH</b><b style="color:red">*</b></td>
+  <td><b>:</b></td>
+  <td><input type="date" name="date" id="dob"></td>
+</tr>
+
+<tr>
+  <td><b>AGE</b></td>
+  <td><b>:</b></td>
+  <td><input type="number" name="number" onclick="calculate()" id="age"></td>
+</tr>
+
+<tr>
+  <td><b>GENDER</b><b style="color:red">*</b></td>
+  <td><b>:</b></td>
+  <td><input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female" > Female
+  <input type="radio" name="gender" value="other"> Others</td>
+</tr>
+
+<tr>
+  <td><b>E-MAIL ID</b><b style="color:red">*</b></td>
+  <td><b>:</b></td> 
+  <td><input type="email" name="email"></td>
+</tr>
+
+<tr>
+  <td><b>CONTACT NO</b><b style="color:red">*</b></td>
+  <td><b>:</b></td>
+  <td><input type="tel" name="contact" id="one"><p id="two" style="color:red";></p></td>
+</tr>
+
+<tr>
+<td><b>HOBBIES</b><b style="color:red">*</b></td>
+<td><b>:</b></td>
+<td><input type="checkbox" id="checked" name="hobby" value="Drawing">Drawing<br>
+<input type="checkbox" id="checked" name="hobby" value="Reading">Reading<br>
+<input type="checkbox" id="checked"  name="hobby" value="Gardening">Gardening<br>
+<input type="checkbox" id="checked" name="hobby" value="Others">Others
+<p id="three" style="color:red";></p></td>
+</tr>
+
+<tr>
+<td><b>ADDRESS</b></td>
+<td><b>:</b></td>
+<td><textarea name="address">
+</textarea></td>
+</tr>
+
+<tr>
+<td><b>COUNTRY</b><b style="color:red">*</b></td>
+<td><b>:</b></td>
+<td><select name="Country">
+   <option value="select">SELECT</option>
+   <option value="IND">INDIA</option>
+   <option value="USA">UNITED STATES OF AMERICA</option>
+   <option value="FRANCE">FRANCE</option>
+   <option value="CHINA">CHINA</option>
+</select></td>
+</tr>
+
+<tr>
+<td></td>
+<td><button type="button" onclick="validate()">REGISTER</button></td>
+<td><button type="button">CLEAR</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+#my_image
+     {
+  width:200px;
+  align:center;
+     }
+#p01 {
+  color: brown;
+  font-style:italic;
+     }
+#p02 {
+  color: brown;
+  font-style:italic;
+     }
+/* unvisited link */
+a:link {
+  color: brown;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: orange;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
